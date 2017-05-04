@@ -12,7 +12,7 @@ In order to view the results, please activate com.tally.kata01.shopping.TestRece
 
 Entities / Objects
 ==================
-The project is composed of 3 pacakges:
+The project is composed of 3 packages:
 shopping
 product
 discount
@@ -22,17 +22,17 @@ Shopping
 ============
 Basket:  
 An accumulator which holds the list of purchased products. For each product it includes its name and quantity.
-This object is not imutable as the basket is updated each time a product is added to it.
+This object is not immutable as the basket is updated each time a product is added to it.
 
 SelectedDiscount:
 A specific discount which was activated during this purchase. It include the details about the discount name, value, the number
-of time it was used for this product and the product name.
+of times it was used for this product, product name.
 (If the discount is "buy 2 for 10$" and the basket include 4 items of this product, the discount was used twice.)
  
 Receipt:
 This is the main object of this project.
-The Receipt provides "generate" method. The input paramter is the basket content.
-The outcome of the "generate" are severl objects which include all the required details in order to print the receipt.
+The Receipt provides "generate" method. The input parameter is the basket content.
+The outcome of the "generate" are several objects which include all the required details in order to print the receipt.
 The logic of "generate" is:
 Traverse the Basket and find out all the used discounts - This is a set of SelectedDiscount instances
 Calculate the total full price
@@ -60,7 +60,7 @@ Discount:
 Interface, representing all the required APIs of a discount
 
 AbstractDiscount:
-An abstract class which imlements the base logic which is shared by all the Discount implementations.
+An abstract class which implements the base logic which is shared by all the Discount implementations.
 
 GroupPriceDiscount:
 Specific implementation of discount "Buy 2 for the price x".
@@ -82,6 +82,6 @@ Specific implementation of DiscountsManager. This implementation stores the disc
 
 ToDo:
 =====
-Product should be an interface, and there should be specific implementations for varius products which might
+Product should be an interface, and there should be specific implementations for various products which might
 
 
