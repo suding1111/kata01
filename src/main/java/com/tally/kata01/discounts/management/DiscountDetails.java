@@ -21,13 +21,17 @@ public class DiscountDetails {
 		private long discountUsages = 0;
 		
 		//The discount value - the amount of money to be deducted due to the applied discount
-		BigDecimal discountValue = BigDecimal.ZERO;
+		private BigDecimal discountValue = BigDecimal.ZERO;
+		
+		//The product name which this discount was applied to.
+		private String productName;
 		
 		
-		public DiscountDetails(Discount discount, BigDecimal purchasedQuantity, BigDecimal fullPricePerUnit){
+		public DiscountDetails(Discount discount, BigDecimal purchasedQuantity, BigDecimal fullPricePerUnit, String productName){
 			this.name = discount.getName(); 
 			this.discountUsages = discount.getDiscountUsages(purchasedQuantity);
 			this.discountValue = discount.getDiscountValue(purchasedQuantity, fullPricePerUnit);
+			this.productName = productName;
 		}
 
 
@@ -41,6 +45,11 @@ public class DiscountDetails {
 
 		public BigDecimal getDiscountValue() {
 			return discountValue;
+		}
+
+
+		public String getProductName() {
+			return productName;
 		}
 
 	}
