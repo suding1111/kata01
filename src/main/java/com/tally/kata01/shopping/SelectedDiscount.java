@@ -1,4 +1,4 @@
-package com.tally.kata01.discounts.management;
+package com.tally.kata01.shopping;
 
 import java.math.BigDecimal;
 
@@ -10,7 +10,7 @@ import com.tally.kata01.discounts.Discount;
  *
  */
 
-public class DiscountDetails {
+public class SelectedDiscount {
 	 
 		//The discount name
 		private String name;
@@ -27,7 +27,7 @@ public class DiscountDetails {
 		private String productName;
 		
 		
-		public DiscountDetails(Discount discount, BigDecimal purchasedQuantity, BigDecimal fullPricePerUnit, String productName){
+		public SelectedDiscount(Discount discount, BigDecimal purchasedQuantity, BigDecimal fullPricePerUnit, String productName){
 			this.name = discount.getName(); 
 			this.discountUsages = discount.getDiscountUsages(purchasedQuantity);
 			this.discountValue = discount.getDiscountValue(purchasedQuantity, fullPricePerUnit);
